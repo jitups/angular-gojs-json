@@ -1,0 +1,20 @@
+:host ::ng-deep .myDiagramDiv {
+  background: whitesmoke;
+  width: 700px;
+  height: 300px;
+}
+
+:host ::ng-deep .left {
+  float: left;
+  padding: 5px;
+  margin: 5px;
+}
+
+:host ::ng-deep .box {
+  border: solid 1px black;
+  background: whitesmoke;
+}
+
+:host ::ng-deep .clear {
+  clear: both;
+}

@@ -1,0 +1,27 @@
+<h1>GoJS / Angular - Trying out custom node</h1>
+
+<div class="left">
+  Diagram
+  <gojs-diagram #myDiagram [initDiagram]='initDiagram' [nodeDataArray]='state.diagramNodeData' [linkDataArray]='state.diagramLinkData'
+    [divClassName]='diagramDivClassName' [modelData]='state.diagramModelData' [(skipsDiagramUpdate)]='state.skipsDiagramUpdate'
+    (modelChange)='diagramModelChange($event)'>
+  </gojs-diagram>
+</div>
+
+<div class="clear left box">
+  <h3>Links in app data</h3>
+  <ul>
+    <li *ngFor="let ld of state.diagramLinkData">
+      Link Key: {{ld.key}}, To: {{ld.to}}, From: {{ ld.from }}
+    </li>
+  </ul>
+</div>
+
+<div class="left box">
+  <h3>Nodes in app data</h3>
+  <ul>
+    <li *ngFor="let nd of state.diagramNodeData">
+      Node ID: {{nd.id}}, Text: {{nd.text}}, Color: {{nd.color}}
+    </li>
+  </ul>
+</div>
